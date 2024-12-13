@@ -29,7 +29,8 @@ int	main() {
 		std::cerr << "Exception: " << e.what() << std::endl;
 	}
 
-	std::cout << "\033[32m" << "0 test" << "\033[0m" <<  std::endl;
+	std::cout << std::endl;
+	std::cout << "\033[32m" << "To high test" << "\033[0m" <<  std::endl;
 	try {
 		Bureacrat josip("Josip", 0);
 	} catch (const std::exception& e) {
@@ -37,7 +38,7 @@ int	main() {
 	}
 
 	std::cout << std::endl;
-	std::cout << "\033[32m" << "151 test" << "\033[0m" <<  std::endl;
+	std::cout << "\033[32m" << "To low test" << "\033[0m" <<  std::endl;
 	try {
 		Bureacrat goran("Goran", 151);
 	} catch (const std::exception& e) {
