@@ -1,7 +1,7 @@
 NAME = main
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++17
-SRC = main.cpp Bureaucrat.cpp AForm.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
 OBJ_DIR = ./obj
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 

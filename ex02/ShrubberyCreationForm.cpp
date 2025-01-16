@@ -23,15 +23,14 @@ void	ShrubberyCreationForm::execute_action() const {
 	if (!file.is_open()) {
 		throw std::ios_base::failure("Failed to create file");
 	}
-	file << "       _-_"
-			"    /~~   ~~\""
-			" /~~         ~~\""
-			"{               }"
-			" \"  _-     -_  /"
-			"   ~  \\ //  ~"
-			"_- -   | | _- _"
-			"  _ -  | |   -_"
-			"      // \\";
+	file << "    /\\\n"
+			"   /  \\\n"
+			"  /    \\\n"
+			" /      \\\n"
+			"/        \\\n"
+			"----------\n"
+			"    ||\n"
+			"    ||\n";
 	file.close();
 	std::cout << "Shrubbery has been created at " << target << "_shrubbery" << std::endl;
 }

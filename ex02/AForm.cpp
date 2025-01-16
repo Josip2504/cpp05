@@ -58,6 +58,10 @@ const char*	Form::GradeTooLowException::what() const noexcept {
 	return "Grade of Form is too low";
 }
 
+const char* Form::NotSignedException::what() const noexcept {
+	return "Form is not signed";
+}
+
 void	Form::checkGrade(int grade) const {
 	if (grade < 1) {
 		throw GradeTooHighException();
