@@ -1,6 +1,3 @@
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define SHRUBBERYCREATIONFORM_HPP
-
 #include "AForm.hpp"
 #include <iostream>
 #include <fstream>
@@ -18,5 +15,3 @@ class ShrubberyCreationForm : public Form {
 
 		void	execute_action() const override;
 };
-
-#endif

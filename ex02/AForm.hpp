@@ -9,6 +9,7 @@
 #define GREEN "\033[32m"
 #define RED "\033[31m"
 #define WHITE "\033[0m"
+#define YELLOW "\033[33m"
 
 class Form {
 	private:
