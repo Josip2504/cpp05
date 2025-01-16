@@ -1,42 +1,43 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 #include "Bureaucrat.hpp"
 #include <iostream>
 
 int main() {
-	std::cout << YELLOW <<  "Shrubbery test" << WHITE << std::endl << std::endl;
+	Bureacrat bob("Bob", 130);
+	Bureacrat tom("Tom", 45);
+	Bureacrat john("John", 5);
+
+	ShrubberyCreationForm shrubberyForm("home");
+	PresidentialPardonForm presidentalForm("President");
+	RobotomyRequestForm robotomyForm("Robot");
+
+	std::cout << YELLOW <<  "Unsigned forms" << WHITE << std::endl;
+	std::cout << shrubberyForm << std::endl;
+	std::cout << robotomyForm << std::endl;
+	std::cout << presidentalForm << std::endl << std::endl;
+
 	try {
-		Bureacrat bob("Bob", 130);  // Bureaucrat with grade 130
-		ShrubberyCreationForm shrubberyForm("home");
-
-		std::cout << shrubberyForm << std::endl << std::endl;
-
-		// Sign the form
+		std::cout << YELLOW <<  "Shrubbery test" << WHITE << std::endl;
 		bob.signForm(shrubberyForm);
-		std::cout << std::endl << shrubberyForm << std::endl << std::endl;
-
-		// Execute the form
+		std::cout << shrubberyForm << std::endl << std::endl;
 		bob.executeForm(shrubberyForm);
-	} catch (const std::exception& e) {
-		std::cerr << "Error: " << e.what() << std::endl;
-	}
 
-	std::cout << std::endl << YELLOW << "Presidental pardon test" <<  WHITE << std::endl;
-	try {
-		Bureacrat tom("Tom", 5);  // Bureaucrat with grade 5
-		PresidentialPardonForm presidentalForm("President");
+		std::cout << std::endl << YELLOW << "Robotomy request test" <<  WHITE << std::endl;
+		bob.signForm(robotomyForm);
+		std::cout << robotomyForm << std::endl << std::endl;
+		tom.signForm(robotomyForm);
+		std::cout << robotomyForm << std::endl << std::endl;
+		tom.executeForm(robotomyForm);
 
+		std::cout << std::endl << YELLOW << "Presidental pardon test" <<  WHITE << std::endl;
+		john.signForm(presidentalForm);
 		std::cout << presidentalForm << std::endl << std::endl;
+		john.executeForm(presidentalForm);
 
-		// Sign the form
-		tom.signForm(presidentalForm);
-		std::cout << std::endl << presidentalForm << std::endl << std::endl;
-
-		// Execute the form
-		tom.executeForm(presidentalForm);
 	} catch (const std::exception& e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
-
 	return 0;
 }
